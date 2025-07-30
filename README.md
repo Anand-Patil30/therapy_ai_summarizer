@@ -22,12 +22,12 @@ This application is designed to process and analyze audio data for therapy sessi
 Run the main application script:
 
 ```bash
-python src/my_project/main.py
+uvicorn my_project.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ## Notes
 
-- The `therapy` virtual environment folder and compiled files are excluded from version control.
+- The virtual environment folder and compiled files are excluded from version control.
 - Secrets such as API keys should be stored securely and not committed to the repository.
 
 ## License
