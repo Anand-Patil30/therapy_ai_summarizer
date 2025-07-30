@@ -1,0 +1,15 @@
+summarize_session:
+  description: >
+    Convert a diarized therapy transcript into a structured SOAP (Subjective, Objective, Assessment, Plan) clinical note, following professional mental health documentation standards.
+
+    The note must include:
+    - Client's subjective concerns, emotions, goals, symptoms (Subjective)
+    - Therapist’s observations and mental status evaluation (Objective)
+    - Clinician's impression/diagnosis, including DSM-5 codes where appropriate (Assessment)
+    - Clear follow-up and treatment recommendations (Plan)
+
+  expected_output: >
+    A complete SOAP-format clinical summary including DSM-5 diagnostic impressions (where relevant), suitable for inclusion in mental health practice notes.
+
+  input_variables:
+    - transcript_text

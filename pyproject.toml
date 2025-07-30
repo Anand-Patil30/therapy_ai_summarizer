@@ -1,0 +1,35 @@
+[project]
+name = "therapy_ai_summarizer"
+version = "0.1.0"
+description = "Offline therapy summarizer using CrewAI and FastAPI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.130.0,<1.0.0",
+    "fastapi>=0.101.0",
+    "uvicorn[standard]>=0.23.2",
+    "whisperx>=3.0.0",
+    "pyannote.audio>=2.3.1",
+    "pydub>=0.25.1",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0.0",
+    "numpy>=1.24.0",
+    "torch==2.2.2",
+    "torchaudio==2.2.2",
+    "python-multipart>=0.0.6"
+]
+# Optionally add others from requirements.txt above
+
+[project.scripts]
+therapy_ai_summarizer = "my_project.main:run"
+run_crew = "my_project.main:run"
+train = "my_project.main:train"
+replay = "my_project.main:replay"
+test = "my_project.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
